@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Bhaina+2&family=Roboto+Slab&display=swap');
+*{
+    margin: 0;
+    padding:0 ;
+}
+nav{
+    background-color: purple;
+    color:antiquewhite;
+    font-size: 27px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;      
+    font-family: 'Roboto Slab', serif;
+}
+
+.gameContainer{
+    background-color: lightyellow;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 50px;
+    padding: 20px;
+}
+
+.container{
+    display: grid;
+    grid-template-rows: repeat(3,10vw);
+    grid-template-columns: repeat(3,10vw);
+    font-family: 'Roboto','sans-serif';
+}
+nav ul{
+    list-style-type: none;
+    height: 120;
+}
+
+.box{
+    border: 2px solid black;
+    font-size: 8vw;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.box:hover{
+    background-color: rgb(201, 195, 227);
+}
+.gameInfo{
+    padding: 10px;
+    margin: 10px;
+    font-size: 1rem;
+    font-family: 'Baloo Bhaina 2', cursive;
+}
+
+.reset{
+    margin: 0 16px;
+    padding : 13px 31px;
+    background-color: rgb(21, 28, 155);
+    color: white;
+    border-radius: 5px;
+    cursor : pointer;
+}
+
+h1{
+    padding-left: 13px;
+}
+#div_img{
+    opacity: 0;
+}
+.br-0{
+    border-right:0px; 
+}
+.bl-0{
+    border-left:0px;
+}
+.bt-0{
+    border-top:0px;
+}
+.bb-0{
+    border-bottom: 0px;
+}
+.line{
+    background-color: black;
+    height: 5px;
+    width: 0;
+    position: absolute;
+    background-color: #4319ea;
+    transition: width 1s ease-in-out;
+}
+
+@media screen and (max-width:800px) {
+    .gameContainer{
+        flex-wrap: wrap;
+        margin: 10px;
+    }
+    #div_img{
+        height: 230px;
+    }
+    .container{
+        display: grid;
+        margin-top: 30px;
+        grid-template-rows: repeat(3,20vw);
+        grid-template-columns: repeat(3,20vw);
+        font-family: 'Roboto','sans-serif';
+    }
+    .gameInfo{
+        margin-top: 50px;
+        font-size: 20px;
+    }
+    .boxtext{
+        font-size: 50px;
+    }
+}
